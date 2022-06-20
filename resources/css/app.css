@@ -1,0 +1,15 @@
+.square:before{
+    content: "";
+    display: block;
+    padding-top: 100%;
+    background-color: rgb(141, 141, 141);
+    margin: 1px;
+}
+
+#stepper, .toolbar > li:hover{
+    cursor:pointer;
+}
+
+.bbred3{
+    border-bottom:3px solid rgb(204, 0, 0);
+}

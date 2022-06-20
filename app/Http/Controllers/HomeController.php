@@ -17,4 +17,14 @@ class HomeController extends Controller
     {
         return view('home');
     }
+
+    public function layout()
+    {
+        return view('guest.layout');
+    }
+
+    public function rfq()
+    {
+        return view('guest.rfq');
+    }
 }

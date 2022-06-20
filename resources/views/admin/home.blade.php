@@ -7,12 +7,35 @@
 @stop
 
 @section('content')
-    <p>Welcome to this beautiful admin panel.</p>
+    <div class="row">
+        <div class="col">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h5 class="card-title">Pending quote requests</h5>
+                </div>
+                <div class="card-footer text-muted">
+                    <a href="{{ route('admin.pending') }}" class="btn btn-primary">Open tool <i class="fa-solid fa-angles-right"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h5 class="card-title">Generate a quote</h5>
+                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                </div>
+                <div class="card-footer text-muted">
+                    <a href="{{ route('rfq') }}" class="btn btn-primary">Open tool <i class="fa-solid fa-angles-right"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            
+        </div>
+    </div>
+    
 @stop
 
-@section('css')
-    <link rel="stylesheet" href="/css/admin_custom.css">
-@stop
 
 @section('js')
     <script> console.log('Hi!'); </script>
