@@ -36,7 +36,7 @@
                         <td>
                             <div class="btn-group" role="group" aria-label="Actions">
                                 <button type="button" class="btn btn-secondary"><i class="fas fa-ban"></i> Block</button>
-                                <button type="button" class="btn btn-secondary"><i class="fas fa-trash-alt"></i> Delete</button>
+                                <button type="button" class="btn btn-danger"><i class="fas fa-trash-alt"></i> Delete</button>
                             </div>
                         </td>
                     </tr>

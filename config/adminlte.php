@@ -45,10 +45,10 @@ return [
     |
     */
 
-    'logo' => '<b>Magna</b>',
-    'logo_img' => 'images/m_magna.png',
+    'logo' => '',
+    'logo_img' => 'images/full_m_alt.png',
     'logo_img_class' => 'brand-image',
-    'logo_img_xl' => null,
+    'logo_img_xl' => 'images/full_m_magna_alt.png',
     'logo_img_xl_class' => 'brand-image-xs',
     'logo_img_alt' => 'Magna',
 
