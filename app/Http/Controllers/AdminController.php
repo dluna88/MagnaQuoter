@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\QuoteTable;
+use App\Models\User;
 
 class AdminController extends Controller
 {
@@ -17,6 +19,12 @@ class AdminController extends Controller
     }
 
     public function pending(){
-        return view('admin.pending');
+        $quotes = QuoteTable::all();
+        return view('admin.pending',compact('quotes'));
+    }
+
+    public function users(){
+        $users = User::all();
+        return view('admin.users',compact('users'));
     }
 }

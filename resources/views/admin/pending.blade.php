@@ -9,9 +9,40 @@
 @section('content')
     <div class="row">
         <div class="col">
-            <div class="card text-center">
+            <div class="card">
+                <div class="card-header">
+                    <h1 class="h4">Pending quotes</h1>
+                </div>
                 <div class="card-body">
-                    <h5 class="card-title">Pending quote requests list here</h5>
+
+                    @if($quotes->count() === 0)
+                    <div class="row">
+                        <p style="color:#a4a4a4">
+                        No pending quotes to review
+                        </p>    
+                    </div>
+                    @else
+
+                    <table class="table     table-striped">
+                    
+                        <thead>
+                            <th>id</th>
+                            <th>volume</th>
+                            <th>kick off date</th>
+                        </thead>
+
+                        <tbody>
+                        @foreach($quotes as $quote)
+                            <tr>
+                                <td>{{ $quote->id }}</td>
+                                <td>{{ $quote->volume }}</td>
+                                <td>{{ $quote->kickoff_date }}</td>
+                            </tr>
+                        @endforeach
+                        </tbody>
+                    </table>
+
+                    @endif
                 </div>
             </div>
         </div>
