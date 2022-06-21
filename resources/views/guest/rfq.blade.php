@@ -34,7 +34,7 @@
             <div class="row align-items-center">
                 <div class="col">
                     <label for="" class="form-label">Tech Availability</label>
-                    <input type="text" class="form-control" name="tech_availability">
+                    <input type="text" class="form-control" name="tech_availibility">
                     <div id="emailHelp" class="form-text">Percentage of time that is not a down time. <br> Example: 85</div>
                 </div>
                 <div class="col">
