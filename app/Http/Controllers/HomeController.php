@@ -27,4 +27,8 @@ class HomeController extends Controller
     {
         return view('guest.rfq');
     }
+
+    public function rfq_post(Request $data){
+        return $data;
+    }
 }

@@ -19,7 +19,7 @@ class QuoteTable extends Model
         'operators_required',
         'total_robots',
         'area',
-        'cycle_time',
-        'math_data_level'
+        // 'cycle_time',
+        // 'math_data_level'
     ];
 }

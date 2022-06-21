@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/layout', [HomeController::class, 'layout'])->name('layout');
 Route::get('/rfq', [HomeController::class, 'rfq'])->name('rfq');
+Route::post('/rfq',[HomeController::class, 'rfq_post'])->middleware('can:admin.home')->name('rfq_post');
 
 Auth::routes();
 
