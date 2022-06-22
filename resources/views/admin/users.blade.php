@@ -3,13 +3,16 @@
 @section('title', 'Dashboard')
 
 @section('content_header')
+    <div class="row">
+        <h1 class="card-title">Registred Users</h1>
+        <div class="card-tools"><span class="badge badge-primary float-rigth">Total: {{ $users->count() }}</span></div>
+    </div>
+@stop
 
+@section('content')
 
-    <div class="card">
-        <div class="card-header">
-            <h1 class="card-title">Registred Users</h1>
-            <div class="card-tools"><span class="badge badge-primary float-rigth">Total: {{ $users->count() }}</span></div>
-        </div>
+<div class="card">
+        
         <div class="card-body">
 
             @if($users->count() === 0)
@@ -26,6 +29,8 @@
                 <thead>
                     <th>Name</th>
                     <th>Email</th>
+                    <th>Phone</th>
+                    <th>Quote requests</th>
                     <th>Actions</th>
                 </thead>
                 <tbody>
@@ -33,10 +38,12 @@
                     <tr>
                         <td>{{ $user->name }}</td>
                         <td>{{ $user->email }}</td>
+                        <td>{{ $user->phone }}</td>
+                        <td>{{ $user->quotes }}</td>
                         <td>
                             <div class="btn-group" role="group" aria-label="Actions">
                                 <button type="button" class="btn btn-secondary"><i class="fas fa-ban"></i> Block</button>
-                                <button type="button" class="btn btn-danger"><i class="fas fa-trash-alt"></i> Delete</button>
+                                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteModal" data-name="{{ $user->name }}" data-id="{{ $user->id }}"><i class="fas fa-trash-alt"></i> Delete</button>
                             </div>
                         </td>
                     </tr>
@@ -48,11 +55,5 @@
 
         </div>
     </div>
-
-@stop
-
-@section('content')
-
-
 
 @stop

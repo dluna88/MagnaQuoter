@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
-use App\Models\QuoteTable;
+use App\Models\Quote;
 use App\Models\User;
 
 class AdminController extends Controller
@@ -20,12 +20,13 @@ class AdminController extends Controller
     }
 
     public function pending(){
-        $quotes = QuoteTable::all();
+        $quotes = Quote::all();
         return view('admin.pending',compact('quotes'));
     }
 
     public function users(){
         $users = User::all()->except(Auth::id());
+        
         return view('admin.users',compact('users'));
     }
 }

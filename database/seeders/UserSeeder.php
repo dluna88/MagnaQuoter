@@ -19,6 +19,7 @@ class UserSeeder extends Seeder
         User::create([
             'name' => 'John Doe',
             'email' => 'johndoe@mail.com',
+            'phone' => '8441852365',
             'password' => bcrypt('123456789')
         ])->assignRole('Guest');
 
@@ -29,18 +30,21 @@ class UserSeeder extends Seeder
         ])->assignRole('Admin');
         
         // QuoteTable::create([
-        //     'volume' => '120000',
-        //     'days_year' => '235',
+        //     'volume' => '120000',*
+        //     'days_year' => '235',*
         //     'shifts' => '2',
         //     'hours_shift' => '7.25',
-        //     'tech_availibility' => '0',
+        //     'tech_availibility' => '0',*
         //     'kickoff_date' => '2022/09/06',
         //     'operators_required' => '1',
         //     'total_robots' => '0.00',
         //     'area' => '49.00',
-        //     'cycle_time' => '0',
-        //     'math_data_level' => '1'
+        //     'cycle_time' => 3600/((('volume'/'tech_availibility')/'days_year')/(shifts*hours_shifts)),
+        //     'math_data_level' => '1',
+        //     'user_id' => '1'
         // ]);
+
+        
 
     }
 }

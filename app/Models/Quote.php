@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class QuoteTable extends Model
+class Quote extends Model
 {
     use HasFactory;
 
@@ -19,7 +19,7 @@ class QuoteTable extends Model
         'operators_required',
         'total_robots',
         'area',
-        // 'cycle_time',
+        'cycle_time',
         // 'math_data_level'
     ];
 }

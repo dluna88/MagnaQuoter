@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('quote_tables', function (Blueprint $table) {
+        Schema::create('quotes', function (Blueprint $table) {
             $table->id();
             $table->bigInteger('volume');
             $table->integer('days_year');
@@ -26,6 +26,10 @@ return new class extends Migration
             $table->double('area',4,2);
             $table->integer('cycle_time')->nullable();
             $table->integer('math_data_level')->nullable();
+            
+            $table->foreignId('user_id')->constrained('users','id')->onDelete('cascade');
+
+            $table->json('layout')->nullable();
             $table->timestamps();
         });
     }

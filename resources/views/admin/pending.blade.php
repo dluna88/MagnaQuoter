@@ -29,6 +29,7 @@
                             <th>id</th>
                             <th>volume</th>
                             <th>kick off date</th>
+                            <th>Cycle Time</th>
                         </thead>
 
                         <tbody>
@@ -37,6 +38,7 @@
                                 <td>{{ $quote->id }}</td>
                                 <td>{{ $quote->volume }}</td>
                                 <td>{{ $quote->kickoff_date }}</td>
+                                <td>{{ $quote->cycle_time }}</td>
                             </tr>
                         @endforeach
                         </tbody>
