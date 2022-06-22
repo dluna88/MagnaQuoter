@@ -22,7 +22,8 @@ class AdminController extends Controller
 
     public function pending(){
         $quotes = Quote::all();
-        return view('admin.pending',compact('quotes'));
+        $client = User::where('id',$quotes->user_id)->get();
+        return view('admin.pending',compact('quotes','client'));
     }
 
     public function users(){

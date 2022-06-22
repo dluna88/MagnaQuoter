@@ -14,7 +14,7 @@
                     <h5 class="card-title">Pending quote requests</h5>
                 </div>
                 <div class="card-footer text-muted">
-                    <a href="{{ route('admin.pending') }}" class="btn btn-primary">Open tool <i class="fa-solid fa-angles-right"></i></a>
+                    <a href="{{ route('admin.pending') }}" class="btn btn-primary">View <i class="fa-solid fa-angles-right"></i></a>
                 </div>
             </div>
         </div>

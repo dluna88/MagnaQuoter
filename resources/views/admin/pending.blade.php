@@ -24,19 +24,19 @@
                     <table class="table     table-striped">
                     
                         <thead>
-                            <th>id</th>
+                            <th>Project name</th>
                             <th>volume</th>
                             <th>kick off date</th>
-                            <th>Cycle Time</th>
+                            <th>Client</th>
                         </thead>
 
                         <tbody>
                         @foreach($quotes as $quote)
                             <tr>
-                                <td>{{ $quote->id }}</td>
+                                <td>{{ $quote->project_name }}</td>
                                 <td>{{ $quote->volume }}</td>
                                 <td>{{ $quote->kickoff_date }}</td>
-                                <td>{{ $quote->cycle_time }}</td>
+                                <td>{{ $client->name }}</td>
                             </tr>
                         @endforeach
                         </tbody>

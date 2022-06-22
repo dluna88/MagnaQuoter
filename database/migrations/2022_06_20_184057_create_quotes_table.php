@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('quotes', function (Blueprint $table) {
             $table->id();
+            $table->string('project_name');
             $table->bigInteger('volume');
             $table->integer('days_year');
             $table->integer('shifts');

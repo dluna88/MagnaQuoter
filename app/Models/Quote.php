@@ -10,6 +10,7 @@ class Quote extends Model
     use HasFactory;
 
     protected $fillable = [
+        'project_name',
         'volume',
         'days_year',
         'shifts',
