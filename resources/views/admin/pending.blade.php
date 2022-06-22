@@ -3,16 +3,14 @@
 @section('title', 'Dashboard')
 
 @section('content_header')
-    <h1>Dashboard</h1>
+    <h1>Pending Quotes</h1>
 @stop
 
 @section('content')
-    <div class="row">
+    <div class="row mt-2">
         <div class="col">
             <div class="card">
-                <div class="card-header">
-                    <h1 class="h4">Pending quotes</h1>
-                </div>
+                
                 <div class="card-body">
 
                     @if($quotes->count() === 0)

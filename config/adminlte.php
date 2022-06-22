@@ -252,6 +252,12 @@ return [
             'can' => 'admin.home',
         ],
         [
+            'text' => 'My Uploaded Files',
+            'url' => 'admin/files',
+            'icon' => 'fas fa-copy',
+            'can' => 'admin.home',
+        ],
+        [
             'header' => '',
         ],
         [

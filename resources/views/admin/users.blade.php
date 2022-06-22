@@ -5,14 +5,15 @@
 @section('content_header')
     <div class="row">
         <h1 class="card-title">Registred Users</h1>
-        <div class="card-tools"><span class="badge badge-primary float-rigth">Total: {{ $users->count() }}</span></div>
     </div>
 @stop
 
 @section('content')
 
 <div class="card">
-        
+        <div class="card-header">
+            <div class="card-tools float-rigth"><span class="badge badge-primary ">Total: {{ $users->count() }}</span></div>
+        </div>
         <div class="card-body">
 
             @if($users->count() === 0)
@@ -31,6 +32,7 @@
                     <th>Email</th>
                     <th>Phone</th>
                     <th>Quote requests</th>
+                    <th>Uploaded files</th>
                     <th>Actions</th>
                 </thead>
                 <tbody>
@@ -39,12 +41,10 @@
                         <td>{{ $user->name }}</td>
                         <td>{{ $user->email }}</td>
                         <td>{{ $user->phone }}</td>
-                        <td>{{ $user->quotes }}</td>
+                        <td>{{ $quotes->count() }}</td>
+                        <td>{{ $files->count() }}</td>
                         <td>
-                            <div class="btn-group" role="group" aria-label="Actions">
-                                <button type="button" class="btn btn-secondary"><i class="fas fa-ban"></i> Block</button>
-                                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteModal" data-name="{{ $user->name }}" data-id="{{ $user->id }}"><i class="fas fa-trash-alt"></i> Delete</button>
-                            </div>
+                            <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteModal" data-name="{{ $user->name }}" data-id="{{ $user->id }}"><i class="fas fa-trash-alt"></i> Delete</button>
                         </td>
                     </tr>
                 @endforeach

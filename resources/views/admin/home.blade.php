@@ -22,7 +22,6 @@
             <div class="card text-center">
                 <div class="card-body">
                     <h5 class="card-title">Generate a quote</h5>
-                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
                 </div>
                 <div class="card-footer text-muted">
                     <a href="{{ route('rfq') }}" class="btn btn-primary">Open tool <i class="fa-solid fa-angles-right"></i></a>

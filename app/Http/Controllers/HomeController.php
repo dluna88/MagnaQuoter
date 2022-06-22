@@ -21,28 +21,35 @@ class HomeController extends Controller
     }
 
     public function upload(){
-        return view('guest.upload');
+        $files = File::where('user_id',Auth::id())->get();
+        return view('guest.upload',compact('files'));
     }
 
     public function upload_post(Request $request)
     {
         $validatedData = $request->validate([
-            'file' => 'required|csv,txt,xlx,xls,pdf|max:2048',
+            'file' => ['required','mimes:csv,txt,xlx,xls,pdf','max:2048'],
+        ]);
     
-           ]);
+        $name = $request->file('file')->getClientOriginalName();
     
-           $name = $request->file('file')->getClientOriginalName();
+        $path = $request->file('file')->store('storage/public/files');
     
-           $path = $request->file('file')->store('public/files');
+        $save = new File;
     
-    
-           $save = new File;
-    
-           $save->name = $name;
-           $save->path = $path;
-           $save->user_id = Auth::id();
-    
-           return redirect('guest.upload')->with('status', 'File Has been uploaded successfully');
+        $save->name = $name;
+        $save->path = $path;
+        $save->user_id = Auth::id();
+
+        File::create([
+            'name' => $save->name,
+            'path' => $save->path,
+            'user_id' => $save->user_id
+        ]);
+        
+        $files = File::where('user_id', Auth::id())->get();
+        $status = "File uploaded successfully";
+        return view('guest.upload', compact('files','status'));
     }
 
     public function layout()
