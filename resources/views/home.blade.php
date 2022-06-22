@@ -26,7 +26,21 @@
         </div>
         
         <div class="col">
-            
+            <h1> Are you lost? </h1>
+            <br>
+            <h3> The way this page works is very simple! You have just to feel identified with one of the next statements: </h3>
+                <br>
+               <h4> a) I need a SMA.
+                <br>
+                    Go to 'Generate a quote'
+                    <br>
+                    <br>
+                b) I already have a SMA and I want to quote it.
+                <br>
+                    Go to 'Upload a custom file' 
+                    <br>
+                    </h4>
+
         </div>
     </div>
     

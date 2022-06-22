@@ -27,7 +27,6 @@
                             <th>Project name</th>
                             <th>volume</th>
                             <th>kick off date</th>
-                            <th>Client</th>
                         </thead>
 
                         <tbody>
@@ -36,7 +35,6 @@
                                 <td>{{ $quote->project_name }}</td>
                                 <td>{{ $quote->volume }}</td>
                                 <td>{{ $quote->kickoff_date }}</td>
-                                <td>{{ $client->name }}</td>
                             </tr>
                         @endforeach
                         </tbody>

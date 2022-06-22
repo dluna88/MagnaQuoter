@@ -21,6 +21,7 @@ class Quote extends Model
         'total_robots',
         'area',
         'cycle_time',
+        'user_id',
         // 'math_data_level'
     ];
 }

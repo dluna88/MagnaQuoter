@@ -19,69 +19,101 @@
                         </div>
                     </div>
                     <div class="card-body">
-                        <div class="container-fluid">
-                            <div class="row">
-                                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                                    <label class="mt-3" for="volume">Volume</label>
-                                    <input class="form-control" type="text" name="volume" id="volume" placeholder="example: 120000">
-                                    <div class="form-text">Volume of pieces manufacturated per year.</div>
-                                </div>
-                
-                                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                                    <label class="mt-3" for="days_year">Days / Year</label>
-                                    <input class="form-control" type="text" name="days_year" id="days_year" placeholder="example: 310">
-                                    <div class="form-text">Days worked per year.</div>
-                                </div>
-                
-                                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                                    <label class="mt-3" for="shifts">Shifts</label>
-                                    <input class="form-control" type="text" name="shifts" id="shifts" placeholder="example: 2">
-                                    <div class="form-text">Number of shifts per day.</div>
-                                </div>
-                
-                                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                                    <label class="mt-3" for="hours_shift">Hours / Shift</label>
-                                    <input class="form-control" type="text" name="hours_shift" id="hours_shift" placeholder="example: 7.25">
-                                    <div class="form-text">Hours worked per shift.</div>
-                                </div>
-                
-                                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                                    <label class="mt-3" for="tech_availibility">Tech Availability</label>
-                                    <input class="form-control" type="text" name="tech_availibility" id="tech_availibility" placeholder="example: 85">
-                                    <div class="form-text">Percentage of time that is not a down time.</div>
-                                </div>
-                
-                                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                                    <label class="mt-3" for="kickoff_date">Kick Off Date</label>
-                                    <input class="form-control" type="date" min="{{ date('Y-M-d') }}" name="kickoff_date" id="kickoff_date" placeholder="example: 2022-06-28">
-                                    <div class="form-text">Deadline date to start the production.</div>
-                                </div>
+                        
 
-                                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                                    <label class="mt-3" for="operators_required">Total Operatos Required</label>
-                                    <input class="form-control" type="text" name="operators_required" id="operators_required">
-                                </div>
+                        <div class="accordion" id="accordionQuote">
 
-                                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                                    <label class="mt-3" for="total_robots">Total Robots</label>
-                                    <input class="form-control" type="text" name="total_robots" id="total_robots" placeholder="example:6">
-                                    <div class="form-text">Total robots requiered.</div>
+                            <div class="accordion-item">
+                              <h2 class="accordion-header" id="headingRFQ">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseRFQ" aria-expanded="true" aria-controls="collapseOne">
+                                  RFQ 
+                                </button>
+                              </h2>
+                              <div id="collapseRFQ" class="accordion-collapse collapse show" aria-labelledby="headingRFQ" data-bs-parent="#accordionQuote">
+                                <div style="background-color: #fff;" class="accordion-body">
+                                    <div class="container-fluid">
+                                        <div class="row mb-2">
+                                            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                                                <label class="mt-3" for="volume">Volume</label>
+                                                <input class="form-control" type="text" name="volume" id="volume" placeholder="example: 120000">
+                                                <div class="form-text">Volume of pieces manufacturated per year.</div>
+                                            </div>
+                                    
+                                            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                                                <label class="mt-3" for="days_year">Days / Year</label>
+                                                <input class="form-control" type="text" name="days_year" id="days_year" placeholder="example: 310">
+                                                <div class="form-text">Days worked per year.</div>
+                                            </div>
+                                    
+                                            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                                                <label class="mt-3" for="shifts">Shifts</label>
+                                                <input class="form-control" type="text" name="shifts" id="shifts" placeholder="example: 2">
+                                                <div class="form-text">Number of shifts per day.</div>
+                                            </div>
+                                    
+                                            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                                                <label class="mt-3" for="hours_shift">Hours / Shift</label>
+                                                <input class="form-control" type="text" name="hours_shift" id="hours_shift" placeholder="example: 7.25">
+                                                <div class="form-text">Hours worked per shift.</div>
+                                            </div>
+                                    
+                                            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                                                <label class="mt-3" for="tech_availibility">Tech Availability</label>
+                                                <input class="form-control" type="text" name="tech_availibility" id="tech_availibility" placeholder="example: 85">
+                                                <div class="form-text">Percentage of time that is not a down time.</div>
+                                            </div>
+                                    
+                                            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                                                <label class="mt-3" for="kickoff_date">Kick Off Date</label>
+                                                <input class="form-control" type="date" min="{{ date('Y-M-d') }}" name="kickoff_date" id="kickoff_date" placeholder="example: 2022-06-28">
+                                                <div class="form-text">Deadline date to start the production.</div>
+                                            </div>
+                                    
+                                            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                                                <label class="mt-3" for="operators_required">Total Operatos Required</label>
+                                                <input class="form-control" type="text" name="operators_required" id="operators_required">
+                                            </div>
+                                    
+                                            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                                                <label class="mt-3" for="total_robots">Total Robots</label>
+                                                <input class="form-control" type="text" name="total_robots" id="total_robots" placeholder="example:6">
+                                                <div class="form-text">Total robots requiered.</div>
+                                            </div>
+                                    
+                                            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                                                <label class="mt-3" for="area">Total Area</label>
+                                                <input class="form-control" type="text" name="area" id="area" placeholder="example: 50 (sqare meters)">
+                                                <div class="form-text">Area aviable for the SMA on square meters.</div>
+                                            </div>
+                                    
+                                        </div>
+                                        <div class="row">
+                                            <input type="hidden" name="layout" value="">
+                                    
+                                        </div>
+                                    </div>
                                 </div>
-
-                                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                                    <label class="mt-3" for="area">Total Area</label>
-                                    <input class="form-control" type="text" name="area" id="area" placeholder="example: 50 (sqare meters)">
-                                    <div class="form-text">Area aviable for the SMA on square meters.</div>
-                                </div>
-
+                              </div>
                             </div>
-                            <div class="row">
-                                <input type="hidden" name="layout" value="">
 
+                            <div class="accordion-item">
+                              <h2 class="accordion-header" id="headingLayout">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLayout" aria-expanded="false" aria-controls="collapseTwo">
+                                  Draw a layout (optional)
+                                </button>
+                              </h2>
+                              <div id="collapseLayout" class="accordion-collapse collapse" aria-labelledby="headingLayout" data-bs-parent="#accordionQuote">
+                                <div class="accordion-body">
+                                  
+                                </div>
+                              </div>
                             </div>
-                        </div>
+                            
+                          </div>
+
+
                     </div>
-                    
+
                 </div>
             </div>
             </div>
@@ -89,6 +121,10 @@
     </div>
 
     
+
+
+
+
 
     {{-- <form method="post" action="{{ route('rfq_post') }}" >
         @csrf
