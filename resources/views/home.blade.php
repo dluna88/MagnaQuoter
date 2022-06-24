@@ -6,18 +6,40 @@
     <div class="row">
         <div class="col">
             <div class="card text-center">
+                <div class="card-header">
+                    <h5 class="card-title">Quotes generated</h5>
+                </div>
                 <div class="card-body">
-                    <h5 class="card-title">Generate a quote</h5>
+                    @if($quotes->count() === 0)
+                        <div class="text-center" style="color:#A3a3a3">You have no quotes generated</div>
+                    @else
+                        @foreach ($quotes as $quote)
+                            <div class="row">
+                                <a href="{{ $quote->id }}">{{ $quote->project_name }}</a>
+                            </div>
+                        @endforeach
+                    @endif
                 </div>
                 <div class="card-footer text-muted">
-                    <a href="{{ route('rfq') }}" class="btn btn-primary">Open tool <i class="fa-solid fa-angles-right"></i></a>
+                    <a href="{{ route('rfq') }}" class="btn btn-primary">Generate new quote <i class="fa-solid fa-angles-right"></i></a>
                 </div>
             </div>
         </div>
         <div class="col">
             <div class="card text-center">
+                <div class="card-header">
+                    <h5 class="card-title">Files uploaded</h5>
+                </div>
                 <div class="card-body">
-                    <h5 class="card-title">Upload custom file</h5>
+                    @if($files->count() === 0)
+                        <div class="text-center" style="color:#A3a3a3">You have no files uploaded</div>
+                    @else
+                        @foreach ($files as $file)
+                            <div class="row">
+                                <a href="{{ $file->path }}">{{ $file->name }}</a>
+                            </div>
+                        @endforeach
+                    @endif
                 </div>
                 <div class="card-footer text-muted">
                     <a href="{{ route('upload') }}" class="btn btn-primary">Upload file <i class="fa-solid fa-file-arrow-up"></i></a>

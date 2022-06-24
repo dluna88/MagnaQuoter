@@ -17,7 +17,9 @@ class HomeController extends Controller
 
     public function index()
     {
-        return view('home');
+        $quotes = Quote::where('user_id',Auth::id())->get();
+        $files = File::where('user_id',Auth::id())->get();
+        return view('home',compact('quotes','files'));
     }
 
     public function upload(){
