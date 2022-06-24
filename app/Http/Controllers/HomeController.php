@@ -92,6 +92,6 @@ class HomeController extends Controller
         $rfq->layout = $data->layout;
         $rfq->save();
 
-        return view('guest.quotes')->with('status','Quote created succesfully');
+        return redirect(route('home'));
     }
 }

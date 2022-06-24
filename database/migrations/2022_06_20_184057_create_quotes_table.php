@@ -24,7 +24,7 @@ return new class extends Migration
             $table->date('kickoff_date');
             $table->integer('operators_required');
             $table->double('total_robots',4,2);
-            $table->double('area',4,2);
+            $table->double('area',10,2);
             $table->integer('cycle_time')->nullable();
             $table->integer('math_data_level')->nullable();
             

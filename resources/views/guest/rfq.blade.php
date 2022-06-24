@@ -14,7 +14,7 @@
                             <div class="container-fluid">
                                 <div class="input-group mb-3 mt-3">
                                     <span class="input-group-text" id="project_name">Poject name:</span>
-                                    <input type="text" class="form-control" id="project_name" name="project_name" placeholder="The name of your project" aria-describedby="project_name">
+                                    <input type="text" required class="form-control" id="project_name" name="project_name" placeholder="The name of your project" aria-describedby="project_name">
                                 </div>
                             </div>
                         </div>
@@ -35,54 +35,54 @@
                                             <div class="row mb-2">
                                                 <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                                                     <label class="mt-3" for="volume">Volume</label>
-                                                    <input class="form-control" type="text" name="volume" id="volume" placeholder="example: 120000">
+                                                    <input class="form-control" required type="text" name="volume" id="volume" placeholder="example: 120000">
                                                     <div class="form-text">Volume of pieces manufacturated per year.</div>
                                                 </div>
                                         
                                                 <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                                                     <label class="mt-3" for="days_year">Days / Year</label>
-                                                    <input class="form-control" type="text" name="days_year" id="days_year" placeholder="example: 310">
+                                                    <input class="form-control" required type="text" name="days_year" id="days_year" placeholder="example: 310">
                                                     <div class="form-text">Days worked per year.</div>
                                                 </div>
                                         
                                                 <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                                                     <label class="mt-3" for="shifts">Shifts</label>
-                                                    <input class="form-control" type="text" name="shifts" id="shifts" placeholder="example: 2">
+                                                    <input class="form-control" required type="text" name="shifts" id="shifts" placeholder="example: 2">
                                                     <div class="form-text">Number of shifts per day.</div>
                                                 </div>
                                         
                                                 <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                                                     <label class="mt-3" for="hours_shift">Hours / Shift</label>
-                                                    <input class="form-control" type="text" name="hours_shift" id="hours_shift" placeholder="example: 7.25">
+                                                    <input class="form-control" required type="text" name="hours_shift" id="hours_shift" placeholder="example: 7.25">
                                                     <div class="form-text">Hours worked per shift.</div>
                                                 </div>
                                         
                                                 <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                                                     <label class="mt-3" for="tech_availibility">Tech Availability</label>
-                                                    <input class="form-control" type="text" name="tech_availibility" id="tech_availibility" placeholder="example: 85">
+                                                    <input class="form-control" required type="text" name="tech_availibility" id="tech_availibility" placeholder="example: 85">
                                                     <div class="form-text">Percentage of time that is not a down time.</div>
                                                 </div>
                                         
                                                 <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                                                     <label class="mt-3" for="kickoff_date">Kick Off Date</label>
-                                                    <input class="form-control" type="date" value="{{ date('Y-m-d') }}" min="{{ date('Y-m-d') }}" name="kickoff_date" id="kickoff_date" placeholder="example: 2022-06-28">
+                                                    <input class="form-control" required type="date" value="{{ date('Y-m-d') }}" min="{{ date('Y-m-d') }}" name="kickoff_date" id="kickoff_date" placeholder="example: 2022-06-28">
                                                     <div class="form-text">Deadline date to start the production.</div>
                                                 </div>
                                         
                                                 <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                                                     <label class="mt-3" for="operators_required">Total Operatos Required</label>
-                                                    <input class="form-control" type="text" name="operators_required" id="operators_required">
+                                                    <input class="form-control" required type="text" name="operators_required" id="operators_required">
                                                 </div>
                                         
                                                 <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                                                     <label class="mt-3" for="total_robots">Total Robots</label>
-                                                    <input class="form-control" type="text" name="total_robots" id="total_robots" placeholder="example:6">
+                                                    <input class="form-control" required type="text" name="total_robots" id="total_robots" placeholder="example:6">
                                                     <div class="form-text">Total robots requiered.</div>
                                                 </div>
                                         
                                                 <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                                                     <label class="mt-3" for="area">Total Area</label>
-                                                    <input class="form-control" type="text" name="area" id="area" placeholder="example: 50 (sqare meters)">
+                                                    <input class="form-control" required type="text" name="area" id="area" placeholder="example: 50 (sqare meters)">
                                                     <div class="form-text">Area aviable for the SMA on square meters.</div>
                                                 </div>
                                         
