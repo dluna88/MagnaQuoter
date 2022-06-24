@@ -65,7 +65,7 @@
                                         
                                                 <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                                                     <label class="mt-3" for="kickoff_date">Kick Off Date</label>
-                                                    <input class="form-control" type="date" min="{{ date('Y-M-d') }}" name="kickoff_date" id="kickoff_date" placeholder="example: 2022-06-28">
+                                                    <input class="form-control" type="date" value="{{ date('Y-m-d') }}" min="{{ date('Y-m-d') }}" name="kickoff_date" id="kickoff_date" placeholder="example: 2022-06-28">
                                                     <div class="form-text">Deadline date to start the production.</div>
                                                 </div>
                                         
@@ -88,7 +88,7 @@
                                         
                                             </div>
                                             <div class="row">
-                                                <input type="hidden" name="layout" value="">
+                                                <input type="hidden" id="layout_field" name="layout" value="">
                                         
                                             </div>
                                         </div>
@@ -355,9 +355,8 @@
     $(document).ready(function(){
 
         let json = {
-            "tools":{
-                
-            }
+            "tools":{},
+            "fence":{}
         }
 
         console.log('document ready')
@@ -373,6 +372,7 @@
             if(tool !== null){
 
                 json.tools['"'+id+'"'] = tool;
+                $("#layout_field").val(JSON.stringify(json));
                 console.log(json)
                 
             }else{

@@ -22,6 +22,6 @@ class Quote extends Model
         'area',
         'cycle_time',
         'user_id',
-        // 'math_data_level'
+        'layout'
     ];
 }

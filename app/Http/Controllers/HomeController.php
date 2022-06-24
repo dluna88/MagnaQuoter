@@ -77,18 +77,19 @@ class HomeController extends Controller
         
         $cycle_time = 3600/((($data->volume/$data->tech_availibility)/$data->days_year)/($data->shifts*$data->hours_shift));
         $rfq = new Quote;
+        $rfq->project_name = $data->project_name;
         $rfq->volume = $data->volume;
         $rfq->days_year = $data->days_year;
         $rfq->shifts = $data->shifts;
         $rfq->hours_shift = $data->hours_shift;
         $rfq->tech_availibility = $data->tech_availibility;
-        $rfq->kickoff_date = $data->kikkoff_date;
+        $rfq->kickoff_date = $data->kickoff_date;
         $rfq->operators_required = $data->operators_required;
         $rfq->total_robots = $data->total_robots;
         $rfq->area = $data->area;
         $rfq->cycle_time = $cycle_time;
         $rfq->user_id = Auth::id();
-        
+        $rfq->layout = $data->layout;
         $rfq->save();
 
         return view('guest.quotes')->with('status','Quote created succesfully');
